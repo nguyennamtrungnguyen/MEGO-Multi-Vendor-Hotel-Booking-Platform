@@ -1,28 +1,9 @@
-export const guestRoutes = [
-  {
-    path: "/admin/login",
-    element: "",
-  },
+import type { RouteObject } from "react-router-dom";
+import GuestHome from "../modules/guest/pages/GuestHome";
 
+export const guestRoutes: RouteObject[] = [
   {
-    path: "/admin",
-    element:
-      // <ProtectedRoute allowedRoles={["ADMIN"]}>
-      "",
-      // </ProtectedRoute>
-    children: [
-      {
-        index: true,
-        element: "",
-      },
-      {
-        path: "",
-        element: "",
-      },
-      {
-        path: "",
-        element: "",
-      },
-    ],
+    path: "/",
+    element: <GuestHome />,
   },
 ];

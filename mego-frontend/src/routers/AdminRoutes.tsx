@@ -1,28 +1,9 @@
-export const adminRoutes = [
-  {
-    path: "/admin/login",
-    element: "",
-  },
+import type { RouteObject } from "react-router-dom";
+import AdminHome from "../modules/admin/pages/AdminHome";
 
+export const adminRoutes: RouteObject[] = [
   {
     path: "/admin",
-    element:
-      // <ProtectedRoute allowedRoles={["ADMIN"]}>
-      "",
-      // </ProtectedRoute>
-    children: [
-      {
-        index: true,
-        element: "",
-      },
-      {
-        path: "",
-        element: "",
-      },
-      {
-        path: "",
-        element: "",
-      },
-    ],
+    element: <AdminHome />,
   },
 ];
