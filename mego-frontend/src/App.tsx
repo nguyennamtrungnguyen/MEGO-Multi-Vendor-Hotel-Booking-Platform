@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@mui/material";
 import CustomeTheme from "./themes/CustomeTheme";
-
+import AppRoutes from "./routers/AppRoutes";
+import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <>
@@ -18,7 +19,6 @@ function App() {
           theme="light"
         />
       </ThemeProvider>
-      );
     </>
   );
 }
