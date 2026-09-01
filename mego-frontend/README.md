@@ -8,67 +8,70 @@
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/MUI-7-007FFF?style=for-the-badge&logo=mui&logoColor=white" />
 </p>
 
 ---
 
 ## 📖 Introduction
 
-**MEGO** is a multi-vendor hotel booking platform that allows customers to discover hotels, search for available rooms, make online reservations, manage bookings, and interact with hotel partners.
+**MEGO** is a multi-vendor hotel booking platform that allows users to discover hotels, search for rooms, make reservations, manage bookings, and interact with hotel partners.
 
-The platform is designed around multiple user roles, providing dedicated workflows for:
+The system is designed with multiple roles, each having its own workflow and functionality.
+
+### Main Roles
 
 - 👤 Guest
 - 🧑‍💼 Customer
 - 🏨 Partner
-- 👨‍💻 Administrator
+- 👨‍💻 Admin
 
-The frontend is developed using modern React technologies with a focus on scalability, reusable components, maintainability, and responsive UI.
+The frontend is developed using **React + TypeScript + Vite**, with a modular architecture that separates shared components, role-specific modules, routing, state management, themes, and utilities.
 
 ---
 
-# ✨ Features
+# ✨ Main Features
 
 ## 👤 Guest
 
-Users who have not authenticated can:
+Guests are users who have not logged into the system.
+
+### Features
 
 - View homepage
-- Browse hotels
 - Search hotels
+- View hotel list
 - Filter hotels
 - View hotel details
-- View available rooms
+- View room information
 - View hotel facilities
 - View hotel reviews
-- Register an account
-- Login to the platform
+- Register account
+- Login
 
 ---
 
 ## 🧑‍💼 Customer
 
-Authenticated customers can:
+Customers are authenticated users who can book hotel rooms.
 
-### 🔐 Account
+### Account
 
 - View profile
 - Update personal information
 - Change password
-- Manage account information
+- Manage account
 
-### 🏨 Hotel & Room
+### Hotel
 
 - Search hotels
 - Filter hotels
 - View hotel details
+- View available rooms
 - View room details
 - Check room availability
-- View hotel facilities
-- View hotel reviews
 
-### 📅 Booking
+### Booking
 
 - Select check-in date
 - Select check-out date
@@ -80,27 +83,27 @@ Authenticated customers can:
 - Track booking status
 - Cancel booking
 
-### ⭐ Review
+### Review
 
-- Review hotels
-- Rate hotel experience
-- View submitted reviews
+- Rate hotel
+- Write reviews
+- View reviews
 
 ---
 
 ## 🏨 Partner
 
-Partners can manage their own hotels and booking operations.
+Partners are hotel owners or accommodation providers who use MEGO to manage their properties.
 
-### 🏢 Hotel Management
+### Hotel Management
 
 - Register hotel
 - Update hotel information
-- Manage hotel facilities
-- Upload hotel images
 - Manage hotel information
+- Manage hotel facilities
+- Manage hotel images
 
-### 🛏️ Room Management
+### Room Management
 
 - Add rooms
 - Update rooms
@@ -109,55 +112,54 @@ Partners can manage their own hotels and booking operations.
 - Manage room prices
 - Manage room availability
 
-### 📅 Booking Management
+### Booking Management
 
 - View bookings
 - Confirm bookings
 - Reject bookings
 - Update booking status
-- Manage guest reservations
 
-### 📊 Dashboard
+### Dashboard
 
-- View revenue
 - View booking statistics
+- View revenue
 - View room statistics
 - Monitor hotel performance
 
 ---
 
-## 👨‍💻 Administrator
+## 👨‍💻 Admin
 
-Administrators manage the entire platform.
+Administrators manage the entire MEGO platform.
 
-### 👥 User Management
+### User Management
 
 - View users
 - Search users
-- Update user information
+- Manage users
 - Lock / unlock accounts
-- Manage user roles
+- Manage roles
 
-### 🏨 Partner Management
+### Partner Management
 
 - View partners
-- Approve partner registrations
-- Reject partner registrations
+- Approve partner registration
+- Reject partner registration
 - Manage partner accounts
 
-### 🏢 Hotel Management
+### Hotel Management
 
 - View hotels
 - Approve hotels
 - Reject hotels
+- Manage hotels
 - Hide hotels
-- Manage hotel information
 
-### 📂 System Management
+### System Management
 
 - Manage hotel categories
 - Manage facilities
-- Manage booking data
+- Manage bookings
 - Manage reviews
 - View system statistics
 
@@ -167,27 +169,30 @@ Administrators manage the entire platform.
 
 ## Frontend
 
-| Technology     | Purpose                     |
-| -------------- | --------------------------- |
-| React          | UI development              |
-| TypeScript     | Type safety                 |
-| Vite           | Development & build tool    |
-| Tailwind CSS   | Styling & responsive layout |
-| shadcn/ui      | Reusable UI components      |
-| React Router   | Application routing         |
-| Redux Toolkit  | Global state management     |
-| React Redux    | Redux integration           |
-| Axios          | HTTP requests               |
-| Formik         | Form management             |
-| Yup            | Form validation             |
-| React Toastify | Notifications               |
-| AOS            | Animations                  |
-| Recharts       | Data visualization          |
-| Lucide React   | Icons                       |
+| Technology | Purpose |
+|---|---|
+| React | User interface |
+| TypeScript | Static typing |
+| Vite | Development and build tool |
+| Material UI | UI components |
+| Emotion | MUI styling engine |
+| React Router | Client-side routing |
+| Redux Toolkit | Global state management |
+| React Redux | Redux integration |
+| Axios | HTTP requests |
+| Formik | Form management |
+| Yup | Form validation |
+| React Toastify | Notifications |
+| AOS | Animations |
+| Recharts | Data visualization |
+| Lucide React | Icons |
+| React Icons | Icon library |
 
 ---
 
 # 📁 Project Structure
+
+The project follows a **role-based modular architecture**.
 
 ```text
 mego-frontend/
@@ -196,43 +201,49 @@ mego-frontend/
 │
 ├── src/
 │   │
-│   ├── modules/
-│   │   ├── admin/
-│   │   ├── customer/
-│   │   ├── guest/
-│   │   └── partner/
-│   │
 │   ├── components/
-│   │   ├── ui/
-│   │   ├── common/
-│   │   ├── hotel/
-│   │   ├── room/
-│   │   └── booking/
-│   │
-│   ├── layouts/
-│   │   ├── AdminLayout.tsx
-│   │   ├── CustomerLayout.tsx
-│   │   └── PartnerLayout.tsx
-│   │
-│   ├── routers/
-│   │   ├── AppRouter.tsx
-│   │   ├── ProtectedRoute.tsx
-│   │   └── ScrollToTop.tsx
-│   │
-│   ├── redux/
-│   │   ├── store.ts
-│   │   └── slices/
-│   │
-│   ├── services/
-│   │   ├── api.ts
-│   │   ├── authApi.ts
-│   │   ├── hotelApi.ts
-│   │   ├── roomApi.ts
-│   │   └── bookingApi.ts
+│   │   ├── auth/
+│   │   ├── footer/
+│   │   └── header/
 │   │
 │   ├── hooks/
 │   │
-│   ├── types/
+│   ├── modules/
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── components/
+│   │   │   └── pages/
+│   │   │       └── AdminHome.tsx
+│   │   │
+│   │   ├── customer/
+│   │   │   ├── components/
+│   │   │   └── pages/
+│   │   │       └── CustomerHome.tsx
+│   │   │
+│   │   ├── guest/
+│   │   │   ├── components/
+│   │   │   └── pages/
+│   │   │       └── GuestHome.tsx
+│   │   │
+│   │   └── partner/
+│   │       ├── components/
+│   │       └── pages/
+│   │           └── PartnerHome.tsx
+│   │
+│   ├── routers/
+│   │   ├── AdminRoutes.tsx
+│   │   ├── AppRoutes.tsx
+│   │   ├── CustomerRoutes.tsx
+│   │   ├── GuestRoutes.tsx
+│   │   ├── PartnerRoutes.tsx
+│   │   ├── ProtectedRoutes.tsx
+│   │   └── ScrollToTop.tsx
+│   │
+│   ├── stores/
+│   │   └── store.ts
+│   │
+│   ├── themes/
+│   │   └── CustomTheme.ts
 │   │
 │   ├── utils/
 │   │
@@ -240,12 +251,13 @@ mego-frontend/
 │   ├── index.css
 │   └── main.tsx
 │
-├── components.json
+├── .gitignore
+├── eslint.config.js
 ├── index.html
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
 ├── tsconfig.app.json
 ├── tsconfig.node.json
 ├── vite.config.ts
 └── README.md
-```
