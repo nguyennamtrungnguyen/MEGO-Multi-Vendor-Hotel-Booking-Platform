@@ -169,24 +169,23 @@ Administrators manage the entire MEGO platform.
 
 ## Frontend
 
-| Technology | Purpose |
-|---|---|
-| React | User interface |
-| TypeScript | Static typing |
-| Vite | Development and build tool |
-| Material UI | UI components |
-| Emotion | MUI styling engine |
-| React Router | Client-side routing |
-| Redux Toolkit | Global state management |
-| React Redux | Redux integration |
-| Axios | HTTP requests |
-| Formik | Form management |
-| Yup | Form validation |
-| React Toastify | Notifications |
-| AOS | Animations |
-| Recharts | Data visualization |
-| Lucide React | Icons |
-| React Icons | Icon library |
+| Technology     | Purpose                    |
+| -------------- | -------------------------- |
+| React          | User interface             |
+| TypeScript     | Static typing              |
+| Vite           | Development and build tool |
+| Material UI    | UI components              |
+| Emotion        | MUI styling engine         |
+| React Router   | Client-side routing        |
+| Redux Toolkit  | Global state management    |
+| React Redux    | Redux integration          |
+| Axios          | HTTP requests              |
+| Formik         | Form management            |
+| Yup            | Form validation            |
+| React Toastify | Notifications              |
+| AOS            | Animations                 |
+| Recharts       | Data visualization         |
+| React Icons    | Icon library               |
 
 ---
 
@@ -261,3 +260,4 @@ mego-frontend/
 ├── tsconfig.node.json
 ├── vite.config.ts
 └── README.md
+```
