@@ -1,11 +1,11 @@
 import { ThemeProvider } from "@mui/material";
-import CustomeTheme from "./themes/CustomeTheme";
 import AppRoutes from "./routers/AppRoutes";
 import { ToastContainer } from "react-toastify";
+import CustomTheme from "./themes/CustomTheme";
 function App() {
   return (
     <>
-      <ThemeProvider theme={CustomeTheme}>
+      <ThemeProvider theme={CustomTheme}>
         <AppRoutes />
 
         <ToastContainer

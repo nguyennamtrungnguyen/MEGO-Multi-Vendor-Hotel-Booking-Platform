@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material";
 
-const CustomeTheme = createTheme({
+const CustomTheme = createTheme({
   palette: {
     mode: "light",
 
@@ -239,4 +239,4 @@ const CustomeTheme = createTheme({
   },
 });
 
-export default CustomeTheme;
+export default CustomTheme;
