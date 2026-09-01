@@ -1,75 +1,251 @@
-# React + TypeScript + Vite
+# 🏨 MEGO – Multi-Vendor Hotel Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <strong>A modern multi-vendor hotel booking platform built with React, TypeScript and Vite.</strong>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📖 Introduction
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**MEGO** is a multi-vendor hotel booking platform that allows customers to discover hotels, search for available rooms, make online reservations, manage bookings, and interact with hotel partners.
 
-## Expanding the ESLint configuration
+The platform is designed around multiple user roles, providing dedicated workflows for:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 👤 Guest
+- 🧑‍💼 Customer
+- 🏨 Partner
+- 👨‍💻 Administrator
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The frontend is developed using modern React technologies with a focus on scalability, reusable components, maintainability, and responsive UI.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# ✨ Features
 
-```
+## 👤 Guest
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Users who have not authenticated can:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- View homepage
+- Browse hotels
+- Search hotels
+- Filter hotels
+- View hotel details
+- View available rooms
+- View hotel facilities
+- View hotel reviews
+- Register an account
+- Login to the platform
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
+## 🧑‍💼 Customer
+
+Authenticated customers can:
+
+### 🔐 Account
+
+- View profile
+- Update personal information
+- Change password
+- Manage account information
+
+### 🏨 Hotel & Room
+
+- Search hotels
+- Filter hotels
+- View hotel details
+- View room details
+- Check room availability
+- View hotel facilities
+- View hotel reviews
+
+### 📅 Booking
+
+- Select check-in date
+- Select check-out date
+- Select number of guests
+- Select room
+- Create booking
+- Confirm booking
+- View booking history
+- Track booking status
+- Cancel booking
+
+### ⭐ Review
+
+- Review hotels
+- Rate hotel experience
+- View submitted reviews
+
+---
+
+## 🏨 Partner
+
+Partners can manage their own hotels and booking operations.
+
+### 🏢 Hotel Management
+
+- Register hotel
+- Update hotel information
+- Manage hotel facilities
+- Upload hotel images
+- Manage hotel information
+
+### 🛏️ Room Management
+
+- Add rooms
+- Update rooms
+- Delete rooms
+- Manage room types
+- Manage room prices
+- Manage room availability
+
+### 📅 Booking Management
+
+- View bookings
+- Confirm bookings
+- Reject bookings
+- Update booking status
+- Manage guest reservations
+
+### 📊 Dashboard
+
+- View revenue
+- View booking statistics
+- View room statistics
+- Monitor hotel performance
+
+---
+
+## 👨‍💻 Administrator
+
+Administrators manage the entire platform.
+
+### 👥 User Management
+
+- View users
+- Search users
+- Update user information
+- Lock / unlock accounts
+- Manage user roles
+
+### 🏨 Partner Management
+
+- View partners
+- Approve partner registrations
+- Reject partner registrations
+- Manage partner accounts
+
+### 🏢 Hotel Management
+
+- View hotels
+- Approve hotels
+- Reject hotels
+- Hide hotels
+- Manage hotel information
+
+### 📂 System Management
+
+- Manage hotel categories
+- Manage facilities
+- Manage booking data
+- Manage reviews
+- View system statistics
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+| Technology     | Purpose                     |
+| -------------- | --------------------------- |
+| React          | UI development              |
+| TypeScript     | Type safety                 |
+| Vite           | Development & build tool    |
+| Tailwind CSS   | Styling & responsive layout |
+| shadcn/ui      | Reusable UI components      |
+| React Router   | Application routing         |
+| Redux Toolkit  | Global state management     |
+| React Redux    | Redux integration           |
+| Axios          | HTTP requests               |
+| Formik         | Form management             |
+| Yup            | Form validation             |
+| React Toastify | Notifications               |
+| AOS            | Animations                  |
+| Recharts       | Data visualization          |
+| Lucide React   | Icons                       |
+
+---
+
+# 📁 Project Structure
+
+```text
+mego-frontend/
+│
+├── public/
+│
+├── src/
+│   │
+│   ├── modules/
+│   │   ├── admin/
+│   │   ├── customer/
+│   │   ├── guest/
+│   │   └── partner/
+│   │
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── common/
+│   │   ├── hotel/
+│   │   ├── room/
+│   │   └── booking/
+│   │
+│   ├── layouts/
+│   │   ├── AdminLayout.tsx
+│   │   ├── CustomerLayout.tsx
+│   │   └── PartnerLayout.tsx
+│   │
+│   ├── routers/
+│   │   ├── AppRouter.tsx
+│   │   ├── ProtectedRoute.tsx
+│   │   └── ScrollToTop.tsx
+│   │
+│   ├── redux/
+│   │   ├── store.ts
+│   │   └── slices/
+│   │
+│   ├── services/
+│   │   ├── api.ts
+│   │   ├── authApi.ts
+│   │   ├── hotelApi.ts
+│   │   ├── roomApi.ts
+│   │   └── bookingApi.ts
+│   │
+│   ├── hooks/
+│   │
+│   ├── types/
+│   │
+│   ├── utils/
+│   │
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── components.json
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── README.md
 ```
